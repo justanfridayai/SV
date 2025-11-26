@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Shri Venkateshwara Diabetic Care</title>
+
+    <!-- ===== EXTERNAL CSS FILES ===== -->
+    <!-- Bootstrap & UI Components -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/boxicons.min.css">
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.min.css">
+    <link rel="stylesheet" href="css/jquery.datetimepicker.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/theme-dark.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- ===== GOOGLE FONTS ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- ===== EVENT-SPECIFIC STYLES ===== -->
+    <style>
+        /* Event Card Image Styling */
+        .blog-card img {
+            height: 280px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /* Card Text Height for Desktop */
+        @media (min-width: 567px) {
+            .b-card-text {
+                height: 227px;
+            }
+        }
+    </style>
+
+    <!-- ===== EXTERNAL JAVASCRIPT ===== -->
+    <script src="js/api.js" async defer></script>
+</head>
+
+<body>
+    <!-- ===== PRELOADER ===== -->
+    <div class="preloader">
+        <div class="container">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="preloader loading">
+                        <span class="slice"></span>
+                        <span class="slice"></span>
+                        <span class="slice"></span>
+                        <span class="slice"></span>
+                        <span class="slice"></span>
+                        <span class="slice"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER & NAVIGATION ===== -->
+    <header class="header-area">
+        <div class="navbar-area">
+            <!-- Mobile Navigation -->
+            <div class="main-responsive-nav">
+                <div class="container">
+                    <div class="main-responsive-menu">
+                        <div class="logo">
+                            <a href="/" aria-label="Home">
+                                <img src="images/logo.png" alt="Shri Venkateshwara Diabetic Care Logo" width="70">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="main-navbar pag-nav">
+                <div class="container">
+                    <nav class="navbar navbar-expand-md navbar-two" aria-label="Main Navigation">
+                        <a class="navbar-brand" href="/" aria-label="Home">
+                            <img src="images/logo.png" alt="Shri Venkateshwara Diabetic Care Logo" width="70">
+                        </a>
+                        
+                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a href="/" class="nav-link">Home</a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a href="about-us" class="nav-link">About Us</a>
+                                </li>
+                                
+                                <!-- Services Dropdown -->
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" id="servicesDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        Services
+                                        <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                        <li class="nav-item">
+                                            <a href="pre-diabetic-screening-reversal-of-diabetes" class="nav-link">
+                                                Pre-Diabetic Screening / Reversal of Diabetes
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="nav-item">
+                                            <a href="diabetic-foot-care" class="nav-link">
+                                                Diabetic Foot Care
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="nav-item">
+                                            <a href="management-of-diabetes-its-complications" class="nav-link">
+                                                Management of Diabetes & it's Complications
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="nav-item">
+                                            <a href="diabetic-kitchen" class="nav-link">
+                                                Diabetic Kitchen
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="nav-item">
+                                            <a href="sexual-health-medicine" class="nav-link">
+                                                Sexual Health Medicine
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="nav-item">
+                                            <a href="mobile-woundcare" class="nav-link">
+                                                Mobile Woundcare
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a href="all-events" class="nav-link active">Events</a>
+                                </li>
+                                
+                                <!-- Language Translator 
+                                <li class="nav-item">
+                                    <div id="google_translate_element"></div>
+                                </li>
+                                -->
+                                <!-- Contact Button -->
+                                <li class="nav-btn">
+                                    <a href="contact" class="default-btn">
+                                        Contact Us
+                                        <span></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+        <!-- ===== PAGE BANNER SECTION ===== -->
+        <section class="page-banner-area event-1" aria-labelledby="page-banner-heading">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="container">
+                        <div class="page-content">
+                            <h2 id="page-banner-heading">Events</h2>
+                            <nav aria-label="Breadcrumb">
+                                <ul class="breadcrumb">
+                                    <li><a href="/">Home</a></li>
+                                    <li>Events</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EVENTS GRID SECTION ===== -->
+        <section class="blog-area blog-area-two ptb-100" aria-labelledby="events-heading">
+            <div class="container">
+                <div class="row">
+                    <!-- Event 1: Government Free Medical Camp -->
+                    <div class="col-lg-4 col-md-6">
+                        <article class="blog-card">
+                            <a href="https://shrivenkateshwaradiabeticcare.com/events/government-free-medical-camp/">
+                                <img src="images/event1.jpg" alt="Government free medical camp event">
+                            </a>
+                            <div class="b-card-text">
+                                <time datetime="2025-06-29">June 29, 2025</time>
+                                <h3>
+                                    <a href="https://shrivenkateshwaradiabeticcare.com/events/government-free-medical-camp/">
+                                        Government free medical camp
+                                    </a>
+                                </h3>
+                                <div class="view-more">
+                                    <a href="https://shrivenkateshwaradiabeticcare.com/events/government-free-medical-camp/" class="view-more-btn">
+                                        Read more
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Event 2: Diabetic Awareness Camp in Kovai -->
+                    <div class="col-lg-4 col-md-6">
+                        <article class="blog-card">
+                            <a href="https://shrivenkateshwaradiabeticcare.com/events/kovai-camp/">
+                                <img src="images/event2.jpg" alt="Diabetic awareness camp in Kovai">
+                            </a>
+                            <div class="b-card-text">
+                                <time datetime="2025-06-29">June 29, 2025</time>
+                                <h3>
+                                    <a href="https://shrivenkateshwaradiabeticcare.com/events/kovai-camp/">
+                                        Diabetic awareness camp in Kovai
+                                    </a>
+                                </h3>
+                                <div class="view-more">
+                                    <a href="https://shrivenkateshwaradiabeticcare.com/events/kovai-camp/" class="view-more-btn">
+                                        Read more
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Event 3: Sai Clinic -->
+                    <div class="col-lg-4 col-md-6">
+                        <article class="blog-card">
+                            <a href="https://shrivenkateshwaradiabeticcare.com/events/sai-clinic/">
+                                <img src="images/event3.jpg" alt="Sai Clinic event">
+                            </a>
+                            <div class="b-card-text">
+                                <time datetime="2025-06-29">June 29, 2025</time>
+                                <h3>
+                                    <a href="https://shrivenkateshwaradiabeticcare.com/events/sai-clinic/">
+                                        Sai Clinic – Thudiyalur Road, Kanuvai, Coimbatore.
+                                    </a>
+                                </h3>
+                                <div class="view-more">
+                                    <a href="https://shrivenkateshwaradiabeticcare.com/events/sai-clinic/" class="view-more-btn">
+                                        Read more
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Event 4: Free Eye Care & Diabetic Medical Camp -->
+                    <div class="col-lg-4 col-md-6">
+                        <article class="blog-card">
+                            <a href="https://shrivenkateshwaradiabeticcare.com/events/eye-care-diabetic-medical-camp/">
+                                <img src="images/event4.jpg" alt="Free Eye Care & Diabetic Medical Camp">
+                            </a>
+                            <div class="b-card-text">
+                                <time datetime="2025-06-29">June 29, 2025</time>
+                                <h3>
+                                    <a href="https://shrivenkateshwaradiabeticcare.com/events/eye-care-diabetic-medical-camp/">
+                                        Free Eye Care & Diabetic Medical Camp
+                                    </a>
+                                </h3>
+                                <div class="view-more">
+                                    <a href="https://shrivenkateshwaradiabeticcare.com/events/eye-care-diabetic-medical-camp/" class="view-more-btn">
+                                        Read more
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Event 5: Home Care Services -->
+                    <div class="col-lg-4 col-md-6">
+                        <article class="blog-card">
+                            <a href="https://shrivenkateshwaradiabeticcare.com/events/home-care-services/">
+                                <img src="images/event5.jpg" alt="Home Care Services announcement">
+                            </a>
+                            <div class="b-card-text">
+                                <time datetime="2025-06-29">June 29, 2025</time>
+                                <h3>
+                                    <a href="https://shrivenkateshwaradiabeticcare.com/events/home-care-services/">
+                                        Home Care Services Now Available at Our Clinic
+                                    </a>
+                                </h3>
+                                <div class="view-more">
+                                    <a href="https://shrivenkateshwaradiabeticcare.com/events/home-care-services/" class="view-more-btn">
+                                        Read more
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Event 6: Free Podiatry Care and Diabetic Care Awareness Camp -->
+                    <div class="col-lg-4 col-md-6">
+                        <article class="blog-card">
+                            <a href="https://shrivenkateshwaradiabeticcare.com/events/free-podiatry-care-and-diabetic-care-awareness-camp/">
+                                <img src="images/event6.jpeg" alt="Free Podiatry care and Diabetic care Awareness camp">
+                            </a>
+                            <div class="b-card-text">
+                                <time datetime="2025-11-08">November 8, 2025</time>
+                                <h3>
+                                    <a href="https://shrivenkateshwaradiabeticcare.com/events/free-podiatry-care-and-diabetic-care-awareness-camp/">
+                                        Free Podiatry care and Diabetic care Awareness camp
+                                    </a>
+                                </h3>
+                                <div class="view-more">
+                                    <a href="https://shrivenkateshwaradiabeticcare.com/events/free-podiatry-care-and-diabetic-care-awareness-camp/" class="view-more-btn">
+                                        Read more
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer-area bg-color pt-100 pb-70 at-bottom" id="fixedSection">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget">
+                        <h2>Find us</h2>
+                        
+                        <ul class="contact">
+                            <li>
+                                <i class="bx bx-location-plus" aria-hidden="true"></i>
+                                No.198, Poombuhar Nagar, Edayarpalayam, CBE - 641025.
+                            </li>
+                            
+                            <li>
+                                <a href="tel:+919994586009">
+                                    <i class="bx bx-phone-call" aria-hidden="true"></i>
+                                    99945 86009
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/cdn-cgi/l/email-protection#a8dbc0dac1decdc6c3c9dccddbc0dfc9dac9ccc1c9cacddcc1cbcbc9dacde8cfc5c9c1c486cbc7c5">
+                                    <i class="bx bx-message-dots" aria-hidden="true"></i>
+                                    <span class="__cf_email__" data-cfemail="3b485349524d5e55505a4f5e48534c5a495a5f525a595e4f5258585a495e7b5c565a525715585456">[email protected]</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget pl-50">
+                        <h2>Quick links</h2>
+                        
+                        <ul class="widget-list">
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            
+                            <li>
+                                <a href="/about-us">About Us</a>
+                            </li>
+                            
+                            <li>
+                                <a href="/all-events">Events</a>
+                            </li>
+                            
+                            <li>
+                                <a href="/contact-us">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget">
+                        <h2>Services</h2>
+                        
+                        <ul class="widget-list">
+                            <li>
+                                <a href="/pre-diabetic-screening-reversal-of-diabetes">
+                                    Pre Diabetic Screening Reversal of Diabetes
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/diabetic-foot-care">Diabetic Foot Care</a>
+                            </li>
+                            
+                            <li>
+                                <a href="/management-of-diabetes-its-complications">
+                                    Management of Diabetes its Complications
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/diabetic-kitchen">Diabetic Kitchen</a>
+                            </li>
+                            
+                            <li>
+                                <a href="/sexual-health-medicine">Sexual Health Medicine</a>
+                            </li>
+                            
+                            <li>
+                                <a href="/mobile-woundcare">Mobile Woundcare</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Opening Hours & Social Media -->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget pl-50">
+                        <h2>Open time</h2>
+                        
+                        <ul class="widget-time">
+                            <li>Mon-Sat 9:00 AM - 8:00 PM</li>
+                            <li>Sunday Holiday</li>
+                        </ul>
+                        
+                        <ul class="social-link">
+                            <li>
+                                <a href="https://www.facebook.com/share/1KNKLzQ15t/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                    <i class="bx bxl-facebook bg-1" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="https://x.com/SV_DiabeticCare?t=f1akyBx6QdLGePJBfcVj5Q&s=08" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                    <i class="bx bxl-twitter bg-2" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                    <i class="bx bxl-linkedin bg-3" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="https://www.instagram.com/shrivenkateshwaradiabeticcare?igsh=MThwOXkyOWNhMWE3cg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                    <i class="bx bxl-instagram bg-4" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== FOOTER BOTTOM ===== -->
+  <div class="footer-bottom-area">
+    <div class="container">
+      <p>
+        Copyright 2025 Shri Venkateshwara Diabetic Care All Rights Reserved. Design By
+        <a href="https://www.instagram.com/shelbytech_official?igsh=MWRkNHptN2hmYnZhbg==" target="_blank" rel="noopener noreferrer">ShelbyTech</a>.
+      </p>
+    </div>
+  </div>
+
+    <!-- ===== GO TO TOP BUTTON ===== -->
+    <div class="go-top">
+        <i class="bx bxs-upvote" aria-hidden="true"></i>
+        <span class="sr-only">Go to top</span>
+    </div>
+
+    <!-- ===== QUICK CONTACT BUTTONS ===== -->
+    <a href="https://wa.me/+919994586009/?text=Hello, Need Appointment, Call Me Back." target="_blank" class="btn-whatsapp-pulse btn-whatsapp-pulse-border" aria-label="Contact via WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+    
+    <a href="tel:+919994586009" class="btn-whatsapp-pulse phone" aria-label="Call Us">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+    </a>
+    
+    <a href="/cdn-cgi/l/email-protection#cebda6bca7b8aba0a5afbaabbda6b9afbcafaaa7afacabbaa7adadafbcab8ea9a3afa7a2e0ada1a3" class="btn-whatsapp-pulse envelope" aria-label="Email Us">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+    </a>
+
+    <!-- ===== CHAT WIDGET ===== -->
+    <div class="chat-circle" id="chatCircle" aria-label="Open chat" role="button" tabindex="0">💬</div>
+
+    <div class="chat-box" id="chatBox" aria-hidden="true">
+        <div class="chat-header">
+            Support
+            <button id="closeChat" aria-label="Close chat">×</button>
+        </div>
+
+        <div class="chat-body" id="chatBody">
+            <div class="bot-message">Welcome to shrivenkateshwara diabetic care! We're happy to assist you.</div>
+            <div class="bot-message">How can I help you today?</div>
+
+            <button class="chat-option" id="optAppointment">📅 Book Appointment</button>
+            <button class="chat-option" id="optLocation">📍 Our Location</button>
+            <button class="chat-option" id="optCall">📞 Call Us</button>
+        </div>
+    </div>
+
+    <!-- ===== JAVASCRIPT FILES ===== -->
+    <script data-cfasync="false" src="js/email-decode.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/meanmenu.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.datetimepicker.full.min.js"></script>
+    <script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/app.js"></script>
+    
+    <!-- ===== GOOGLE TRANSLATE ===== -->
+    <script type="text/javascript" src="js/element.js"></script>
+    <script type="text/javascript">
+        /**
+         * Initialize Google Translate Element
+         * Sets up language translation with English and Tamil options
+         */
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: "en,ta",
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    
+    <script>
+        /**
+         * Customize Google Translate Element
+         * Changes the default text from "Select Language" to "LANGUAGE"
+         */
+        $(document).ready(function() {
+            $('#google_translate_element').bind('DOMNodeInserted', function(event) {
+                $('.goog-te-menu-value span:first').html('LANGUAGE');
+                $('.goog-te-menu-frame.skiptranslate').load(function() {
+                    setTimeout(function() {
+                        $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('LANGUAGE')
+                    }, 100)
+                })
+            })
+        })
+    </script>
+
+    <!-- ===== CHAT WIDGET JAVASCRIPT ===== -->
+    <script src="js/chat-widget.js"></script>
+</body>
+</html>
