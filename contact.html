@@ -143,51 +143,99 @@
         <!-- LEFT: FORM -->
         <div class="col-lg-8">
           <div class="contact-form">
-            <form id="comment-form" method="post" action="send-mail.php" class="comment-form mt-35" novalidate>
+            <form id="contactForm" class="comment-form mt-35" novalidate>
 
+  <div class="row clearfix justify-content-center">
 
-              <div class="row clearfix justify-content-center">
+    <input type="text" class="d-none" name="hidden-field">
 
-                <input type="text" class="d-none" name="hidden-field">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label><i class="far fa-user"></i></label>
+        <input name="full-name" class="form-control" placeholder="Your Full Name" required>
+      </div>
+    </div>
 
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label><i class="far fa-user"></i></label>
-                    <input name="full-name" class="form-control" placeholder="Your Full Name" required>
-                  </div>
-                </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label><i class="far fa-envelope"></i></label>
+        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+      </div>
+    </div>
 
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label><i class="far fa-envelope"></i></label>
-                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                  </div>
-                </div>
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label><i class="fas fa-mobile-alt"></i></label>
+        <input type="tel" name="number" class="form-control" placeholder="Your Mobile Number" required>
+      </div>
+    </div>
 
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label><i class="fas fa-mobile-alt"></i></label>
-                    <input type="tel" name="number" class="form-control" placeholder="Your Mobile Number" required>
-                  </div>
-                </div>
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label><i class="fas fa-pencil-alt"></i></label>
+        <textarea name="comments" class="form-control" rows="4" placeholder="Write Message" required></textarea>
+      </div>
+    </div>
 
-                <div class="col-sm-12">
-                  <div class="form-group">
-                    <label><i class="fas fa-pencil-alt"></i></label>
-                    <textarea name="comments" class="form-control" rows="4" placeholder="Write Message" required></textarea>
-                  </div>
-                </div>
+    <!-- reCAPTCHA FIXED -->
+    <div class="col-sm-12">
+      <div class="form-group mb-0" style="padding:1.3%;">
+        <div class="g-recaptcha" data-sitekey="6LdmzBgsAAAAAOxP_iKnI04dUjOXLhpAZlc1_xIt"></div>
 
-                <!-- reCAPTCHA FIXED -->
-                <div class="col-sm-12">
-                  <div class="form-group mb-0" style="padding:1.3%;">
-                    <div class="g-recaptcha" data-sitekey="6LdmzBgsAAAAAOxP_iKnI04dUjOXLhpAZlc1_xIt"></div>
-                    <input type="submit" class="theme-btn btn submitcls" style="background:#3f84e3;color:#fff;" value="Send Message">
-                  </div>
-                </div>
+        <input type="submit" 
+               class="theme-btn btn submitcls" 
+               style="background:#3f84e3;color:#fff;" 
+               value="Send Message">
+      </div>
+    </div>
 
-              </div>
-            </form>
+  </div>
+
+</form>
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    // Check reCAPTCHA
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+        alert("Please complete the reCAPTCHA.");
+        return;
+    }
+
+    // Collect form data
+    const data = {
+        name: document.querySelector("[name='full-name']").value,
+        email: document.querySelector("[name='email']").value,
+        mobile: document.querySelector("[name='number']").value,
+        message: document.querySelector("[name='comments']").value,
+        recaptcha: recaptchaResponse
+    };
+
+    // Send to Vercel backend
+    try {
+        const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (result.ok) {
+            alert("Message sent successfully!");
+            document.getElementById("contactForm").reset();
+            grecaptcha.reset();
+        } else {
+            alert("Failed to send message. Please try again.");
+        }
+    } catch (error) {
+        console.error(error);
+        alert("Error sending message. Try again.");
+    }
+});
+</script>
+
           </div>
         </div>
 
